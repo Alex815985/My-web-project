@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolaw Trading - Your One Stop Shop</title>
+    <style>
+        body {
+            background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 300% 300%;
+            animation: rainbow 10s ease infinite;
+            color: white; /* Text color for better contrast */
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        @keyframes rainbow {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        #myinfo {
+            position: fixed;
+            left: 20px;
+            top: 800px;
+            width: 250px;
+            height: auto; /* Allow height to adjust based on content */
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%; /* Adjusted width for better layout */
+        }
+
+        td {
+            padding: 15px;
+            border: 1px solid white;
+            background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent background */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold; /* Bold text for links */
+        }
+
+        a:hover {
+            color: yellow;
+        }
+
+        #desc {
+            margin: 20px auto;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #fff; /* Border for description area */
+            background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background */
+            width: 80%;
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        #image-display {
+            display: block;
+            margin: 20px auto;
+            width: 300px; /* Adjust based on your design */
+            height: auto;
+        }
+
+        #image-description {
+            text-align: center;
+            margin: 20px auto;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5em; /* Increase size for main header */
+        }
+
+        h2 {
+            font-size: 1.8em; /* Subheader size */
+        }
+
+        .product-title {
+            font-size: 1.5em; /* Size for product titles */
+            margin: 10px 0;
+        }
+    </style>
+    <script>
+        function Focus(text, pic, path) {
+            const box = document.getElementById("desc");
+            box.innerHTML = text + '<br><a href="' + path + '" style="color: yellow;">Learn more...</a>';
+            document.getElementById("image-display").src = pic; // Set image display
+        }
+
+        function LostFocus() {
+            const box = document.getElementById("desc");
+            box.innerHTML = "Hover over a product to learn more.";
+            document.getElementById("image-display").src = ""; // Clear image display
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to Dolaw Trading!</h1>
+    <p>Explore our wide range of products and services below:</p>
+    <table>
+        <tr>
+            <td id="cell_lubricants">
+                <a href="#" onMouseOut="LostFocus();" onMouseOver="Focus('Discover our high-quality lubricants designed for various applications, ensuring the smooth operation of your machinery.', 'Images/lubricants.png', 'lubricants.html');">
+                    <div class="product-title">Lubricants</div>
+                </a>
+            </td>
+            <td id="cell_dump_trucks">
+                <a href="#" onMouseOut="LostFocus();" onMouseOver="Focus('Explore our robust dump trucks that meet your hauling needs, built for durability and efficiency in all conditions.', 'Images/dump-truck.png', 'dump-trucks.html');">
+                    <div class="product-title">Dump Trucks</div>
+                </a>
+            </td>
+            <td id="cell_printers">
+                <a href="#" onMouseOut="LostFocus();" onMouseOver="Focus('Check out our advanced printers that offer high-quality printing solutions for your business needs.', 'Images/printers.png', 'printers.html');">
+                    <div class="product-title">Printers</div>
+                </a>
+            </td>
+            <td id="cell_office_supplies">
+                <a href="#" onMouseOut="LostFocus();" onMouseOver="Focus('Find a wide range of office supplies to help you run your business smoothly and efficiently.', 'Images/office_supplies.png', 'office_supplies.html');">
+                    <div class="product-title">Office Supplies</div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td id="cell_tools">
+                <a href="#" onMouseOut="LostFocus();" onMouseOver="Focus('Discover our extensive range of tools, perfect for every task and project.', 'Images/tools.png', 'tools.html');">
+                    <div class="product-title">Tools</div>
+                </a>
+            </td>
+            <td id="cell_construction_materials">
+                <a href="#" onMouseOut="LostFocus();" onMouseOver="Focus('Browse our selection of high-quality construction materials, ensuring your projects stand the test of time.', 'Images/construction_materials.png', 'construction_materials.html');">
+                    <div class="product-title">Construction Materials</div>
+                </a>
+            </td>
+            <td id="cell_automotive_parts">
+                <a href="#" onMouseOut="LostFocus();" onMouseOver="Focus('Get the best automotive parts and accessories to keep your vehicles running smoothly.', 'Images/automotive_parts.png', 'automotive_parts.html');">
+                    <div class="product-title">Automotive Parts</div>
+                </a>
+            </td>
+            <td id="cell_furniture">
+                <a href="#" onMouseOut="LostFocus();" onMouseOver="Focus('Explore our stylish and functional furniture options for both home and office.', 'Images/furniture.png', 'furniture.html');">
+                    <div class="product-title">Furniture</div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td id="cell_electronics">
+                <a href="#" onMouseOut="LostFocus();" onMouseOver="Focus('Find the latest electronics, including computers, phones, and accessories, to meet your tech needs.', 'Images/electronics.png', 'electronics.html');">
+                    <div class="product-title">Electronics</div>
+                </a>
+            </td>
+            <td id="cell_safety_gear">
+                <a href="#" onMouseOut="LostFocus();" onMouseOver="Focus('Discover our range of safety gear to protect you and your employees in the workplace.', 'Images/safety_gear.png', 'safety_gear.html');">
+                    <div class="product-title">Safety Gear</div>
+                </a>
+            </td>
+            <td id="cell_hardware">
+                <a href="#" onMouseOut="LostFocus();" onMouseOver="Focus('Browse our selection of hardware, ensuring you have everything needed for your projects.', 'Images/hardware.png', 'hardware.html');">
+                    <div class="product-title">Hardware</div>
+                </a>
+            </td>
+            <td id="cell_appliances">
+                <a href="#" onMouseOut="LostFocus();" onMouseOver="Focus('Check out our home appliances designed for convenience and efficiency.', 'Images/appliances.png', 'appliances.html');">
+                    <div class="product-title">Appliances</div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td id="cell_about">
+                <a href="#" onMouseOut="LostFocus();" onMouseOver="Focus('Learn more about our company, our values, and our commitment to quality.', 'Images/about.png', 'about.html');">
+                    <div class="product-title">About Us</div>
+                </a>
+            </td>
+            <td id="cell_contact">
+                <a href="#" onMouseOut="LostFocus();" onMouseOver="Focus('Get in touch with us for inquiries, support, and more information.', 'Images/contact.png', 'contact.html');">
+                    <div class="product-title">Contact Us</div>
+                </a>
+            </td>
+            <td id="cell_testimonials">
+                <a href="#" onMouseOut="LostFocus();" onMouseOver="Focus('Read testimonials from our satisfied customers and learn why we are the best choice.', 'Images/testimonials.png', 'testimonials
